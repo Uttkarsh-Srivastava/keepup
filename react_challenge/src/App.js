@@ -28,6 +28,7 @@ class App extends Component {
           increaseBuy={this.increaseBuy}
           increaseHold={this.increaseHold}
           increaseSell={this.increaseSell}
+          
         />
       </div>
     );

@@ -33,8 +33,6 @@ class Charts extends Component {
     return {
       background: "#f4f4f4",
       padding: "0px",
-      width: "100%",
-      height: "0em",
       margin: "auto"
     };
   };
@@ -42,7 +40,21 @@ class Charts extends Component {
   render() {
     return (
       <div style={this.getStyle()}>
-        <PieChart data={this.state.data} radius='10' cx={50} cy={13} />
+        <PieChart data={this.state.data} radius='40' />
+        <div id='legend'>
+          <div className='legend-data'>
+            <div className='box' id='buy-box' />
+            <p>Buy</p>
+          </div>
+          <div className='legend-data'>
+            <div className='box' id='sell-box' />
+            <p>Sell</p>
+          </div>
+          <div className='legend-data'>
+            <div className='box' id='hold-box' />
+            <p>Hold</p>
+          </div>
+        </div>
       </div>
     );
   }
