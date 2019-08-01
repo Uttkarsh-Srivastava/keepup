@@ -29,29 +29,27 @@ class Charts extends Component {
     return true;
   }
 
-  getStyle = () => {
-    return {
-      background: "#f4f4f4",
-      padding: "0px",
-      margin: "auto"
-    };
-  };
-
   render() {
     return (
-      <div style={this.getStyle()}>
+      <div>
         <PieChart data={this.state.data} radius='40' />
         <div id='legend'>
           <div className='legend-data'>
-            <div className='box' id='buy-box' />
+            <div className='box' id='buy-box'>
+              <p>{this.state.data[1].value - 1}</p>
+            </div>
             <p>Buy</p>
           </div>
           <div className='legend-data'>
-            <div className='box' id='sell-box' />
+            <div className='box' id='sell-box'>
+              <p>{this.state.data[0].value - 1}</p>
+            </div>
             <p>Sell</p>
           </div>
           <div className='legend-data'>
-            <div className='box' id='hold-box' />
+            <div className='box' id='hold-box'>
+              <p>{this.state.data[2].value - 1}</p>
+            </div>
             <p>Hold</p>
           </div>
         </div>

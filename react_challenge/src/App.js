@@ -5,9 +5,9 @@ import Charts from "./components/Charts";
 
 class App extends Component {
   state = {
-    sell: 45,
-    buy: 5,
-    hold: 84
+    sell: 1,
+    buy: 1,
+    hold: 1
   };
 
   increaseBuy = () => {
@@ -28,7 +28,6 @@ class App extends Component {
           increaseBuy={this.increaseBuy}
           increaseHold={this.increaseHold}
           increaseSell={this.increaseSell}
-          
         />
       </div>
     );
